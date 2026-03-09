@@ -14,7 +14,7 @@ const agents = [
 export function AISection() {
   return (
     <div
-      className="relative z-20 py-40 px-2 md:px-4"
+      className="relative z-20 py-40 px-6 md:px-12"
       style={{ backgroundColor: "#09090B" }}
     >
       <div

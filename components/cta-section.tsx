@@ -1,7 +1,7 @@
 export function CTASection() {
   return (
     <section
-      className="py-24 px-2 md:px-4"
+      className="py-24 px-6 md:px-12"
       style={{ backgroundColor: "#09090B" }}
     >
       <div className="max-w-6xl mx-auto">

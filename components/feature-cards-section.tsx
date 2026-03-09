@@ -6,7 +6,7 @@ import { Shield } from "lucide-react";
 export function FeatureCardsSection() {
   return (
     <div className="relative z-20" style={{ backgroundColor: "#09090B" }}>
-      <section className="lg:py-32 px-2 md:px-4 z-10 w-full pt-24 pb-24 relative">
+      <section className="lg:py-32 px-6 md:px-12 z-10 w-full pt-24 pb-24 relative">
         {/* Section Header */}
         <div className="md:mb-24 flex flex-col items-center gap-6 text-center max-w-4xl mx-auto mb-16 px-6 relative">
           <div className="w-full flex justify-between items-end border-b border-zinc-800/80 pb-3 mb-2 relative">
