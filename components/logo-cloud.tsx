@@ -5,12 +5,9 @@ import { Triangle } from "lucide-react";
 
 export function LogoCloud() {
   return (
-    <div
-      className="relative z-20 pb-24 pt-8"
-      style={{ backgroundColor: "#09090B" }}
-    >
-      <div className="w-full flex justify-center px-6">
-        <div className="w-full max-w-4xl text-center">
+    <div className="relative z-20 pb-10 pt-8 w-full">
+      <div className="w-full flex justify-center">
+        <div className="w-full text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

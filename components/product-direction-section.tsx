@@ -4,7 +4,7 @@ import { ChevronRight } from "lucide-react";
 
 export function ProductDirectionSection() {
   return (
-    <section className="relative py-40 px-6 md:px-12 lg:px-24">
+    <section className="relative py-40 px-2 md:px-4 lg:px-24">
       {/* Gradient overlay at top */}
       <div
         className="absolute inset-x-0 top-0 pointer-events-none"
@@ -15,7 +15,7 @@ export function ProductDirectionSection() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto px-6">
         {/* Section label */}
         <div className="flex items-center gap-2 mb-6">
           <div className="w-3 h-3 rounded-full bg-green-500" />

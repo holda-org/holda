@@ -134,15 +134,15 @@ export default function Home() {
 
           {/* Main content */}
           <div className="relative z-10 pt-28 flex flex-col">
-            <div className="w-full flex justify-start px-2 mt-8 md:mt-16 text-left lg:text-left">
-              <div className="px-4 w-full max-w-lg md:max-w-3xl lg:max-w-4xl">
+            <div className="w-full flex justify-center px-6 mt-8 md:mt-16 text-start lg:text-left">
+              <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl px-2">
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] text-balance"
+                  className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
                 >
-                  Escrow payment on Stellar
+                  Secure, trustless escrow for the modern internet
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -156,7 +156,7 @@ export default function Home() {
                   secure, trustless payments between buyers and sellers.
                 </motion.p>
                 {/* CTAs */}
-                <div className="mt-8 flex flex-wrap items-start justify-start lg:justify-start gap-3">
+                <div className="mt-8 flex flex-wrap items-center justify-start lg:justify-start gap-3">
                   <a
                     href="#"
                     className="group inline-flex items-center gap-2 rounded-full bg-lime-300 px-5 py-3 text-neutral-950 font-medium hover:brightness-95 active:translate-y-[1px] transition"
@@ -308,7 +308,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* <LogoCloud /> */}
+            <LogoCloud />
             <FeatureCardsSection />
             <AISection />
             <ProductDirectionSection />

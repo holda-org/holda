@@ -261,7 +261,7 @@ export function WorkflowsSection() {
 
   return (
     <section
-      className="relative py-24 px-6 md:px-12"
+      className="relative pt-24 px-2 md:px-4 lg:px-6 w-full"
       style={{ backgroundColor: "#09090B" }}
     >
       {/* Top gradient */}
@@ -274,7 +274,7 @@ export function WorkflowsSection() {
         }}
       />
 
-      <div className="w-full max-w-md md:max-w-3xl lg:max-w-7xl mx-auto px-6">
+      <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
           <div className="lg:max-w-xl">

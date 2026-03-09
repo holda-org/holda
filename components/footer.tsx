@@ -42,10 +42,10 @@ export function Footer() {
 
   return (
     <footer
-      className="border-t border-zinc-800 py-16 px-6 md:px-12"
+      className="border-t border-zinc-800 py-16 px-6"
       style={{ backgroundColor: "#09090B" }}
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto px-2">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
           {/* Logo */}
           <div className="col-span-2 md:col-span-1">

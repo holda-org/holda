@@ -5,10 +5,10 @@ import { Shield } from "lucide-react";
 
 export function FeatureCardsSection() {
   return (
-    <div className="relative z-20" style={{ backgroundColor: "#09090B" }}>
-      <section className="lg:py-32 px-6 md:px-12 z-10 w-full pt-24 pb-24 relative">
+    <div className="relative z-20 px-2 md:px-4">
+      <section className="lg:py-10 px-6 md:px-12 z-10 w-full relative">
         {/* Section Header */}
-        <div className="md:mb-24 flex flex-col items-center gap-6 text-center max-w-4xl mx-auto mb-16 px-6 relative">
+        <div className="md:mb-24 flex flex-col items-center gap-6 text-center max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto px-6 relative">
           <div className="w-full flex justify-between items-end border-b border-zinc-800/80 pb-3 mb-2 relative">
             <div className="absolute bottom-[-1px] left-1/2 -translate-x-1/2 w-1/3 h-[1px] bg-gradient-to-r from-transparent via-lime-500/30 to-transparent"></div>
 
@@ -66,7 +66,7 @@ export function FeatureCardsSection() {
           </motion.div>
 
           <div className="mt-4 flex items-center justify-center gap-4 opacity-50">
-            <div className="w-16 h-[2px] bg-zinc-950 rounded-full shadow-[inset_0_1px_1px_rgba(0,0,0,1),_0_1px_0_rgba(255,255,255,0.1)]"></div>
+            <div className="w-16 h-[2px] bg-zinc-950 rounded-full shadow-[inset_0_1px_1px_rgba(0,0,0,1),0_1px_0_rgba(255,255,255,0.1)]"></div>
             <div className="flex gap-1.5">
               {[1, 2, 3].map((i) => (
                 <div
@@ -89,7 +89,7 @@ export function FeatureCardsSection() {
         </div>
 
         {/* Hardware Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto px-6">
           {/* Card 1: Monitoring / Settlement */}
           <HardwareCard
             id="TX.01"
