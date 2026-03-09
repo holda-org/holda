@@ -260,7 +260,10 @@ export function WorkflowsSection() {
   };
 
   return (
-    <section className="relative py-24" style={{ backgroundColor: "#09090B" }}>
+    <section
+      className="relative py-24 px-2 md:px-4"
+      style={{ backgroundColor: "#09090B" }}
+    >
       {/* Top gradient */}
       <div
         className="absolute top-0 left-0 right-0 pointer-events-none"

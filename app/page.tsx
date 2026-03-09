@@ -4,7 +4,6 @@ import { CTASection } from "@/components/cta-section";
 import { DashboardMockup } from "@/components/dashboard-mockup";
 import { FeatureCardsSection } from "@/components/feature-cards-section";
 import { Footer } from "@/components/footer";
-import Hero from "@/components/landing-page/hero";
 import { LogoCloud } from "@/components/logo-cloud";
 import { ProductDirectionSection } from "@/components/product-direction-section";
 import {
@@ -25,28 +24,22 @@ import { useState, useEffect } from "react";
 
 export default function Home() {
   const navItems = [
-    {
-      name: "Docs",
-      link: "#docs",
-    },
-    {
-      name: "Features",
-      link: "#features",
-    },
-    {
-      name: "Pricing",
-      link: "#pricing",
-    },
-    {
-      name: "Contact",
-      link: "#contact",
-    },
+    { name: "Docs", link: "#docs" },
+    { name: "Features", link: "#features" },
+    { name: "Pricing", link: "#pricing" },
+    { name: "Contact", link: "#contact" },
   ];
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [yOffset, setYOffset] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200,
+  );
 
   useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const offset = Math.min(scrollY / 300, 1) * -20;
@@ -54,12 +47,17 @@ export default function Home() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
+  const dynamicScale = Math.max(0.4, Math.min(1.2, (windowWidth / 1600) * 1.2));
+
   const baseTransform = {
-    translateX: 2,
-    scale: 1.2,
+    translateX: windowWidth < 640 ? 0 : 2,
+    scale: dynamicScale,
     rotateX: 47,
     rotateY: 31,
     rotateZ: 324,
@@ -136,15 +134,15 @@ export default function Home() {
 
           {/* Main content */}
           <div className="relative z-10 pt-28 flex flex-col">
-            <div className="w-full flex justify-center px-6 mt-16">
-              <div className="w-full max-w-4xl">
+            <div className="w-full flex justify-start px-2 mt-8 md:mt-16 text-left lg:text-left">
+              <div className="px-4 w-full max-w-lg md:max-w-3xl lg:max-w-4xl">
                 <motion.h1
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6 }}
-                  className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
+                  className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] text-balance"
                 >
-                  Secure, trustless escrow for the modern internet
+                  Escrow payment on Stellar
                 </motion.h1>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -158,7 +156,7 @@ export default function Home() {
                   secure, trustless payments between buyers and sellers.
                 </motion.p>
                 {/* CTAs */}
-                <div className="mt-8 flex flex-wrap items-center gap-3">
+                <div className="mt-8 flex flex-wrap items-start justify-start lg:justify-start gap-3">
                   <a
                     href="#"
                     className="group inline-flex items-center gap-2 rounded-full bg-lime-300 px-5 py-3 text-neutral-950 font-medium hover:brightness-95 active:translate-y-[1px] transition"
@@ -207,7 +205,7 @@ export default function Home() {
                   </a>
                 </div>
                 {/* Avatars / social proof */}
-                <div className="mt-7 flex items-center gap-4">
+                <div className="mt-7 flex flex-col sm:flex-row items-start justify-start lg:justify-start gap-4">
                   <div className="flex -space-x-2">
                     <Image
                       src="https://i.pravatar.cc/150?u=1"
@@ -241,9 +239,8 @@ export default function Home() {
               </div>
             </div>
 
-         
             <div
-              className="relative mt-16"
+              className="relative mt-8 md:mt-16"
               style={{
                 width: "100vw",
                 marginLeft: "-50vw",
@@ -251,8 +248,8 @@ export default function Home() {
                 position: "relative",
                 left: "50%",
                 right: "50%",
-                height: "700px",
-                marginTop: "-60px",
+                height: windowWidth < 640 ? "400px" : "700px",
+                marginTop: windowWidth < 640 ? "0" : "-60px",
               }}
             >
               <div
@@ -310,7 +307,7 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
-            
+
             {/* <LogoCloud /> */}
             <FeatureCardsSection />
             <AISection />
