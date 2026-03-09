@@ -6,7 +6,7 @@ import { Shield } from "lucide-react";
 export function FeatureCardsSection() {
   return (
     <div className="relative z-20 px-2 md:px-4">
-      <section className="lg:py-10 px-6 md:px-12 z-10 w-full relative">
+      <section className="lg:py-10 z-10 w-full relative">
         {/* Section Header */}
         <div className="md:mb-24 flex flex-col items-center gap-6 text-center max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto px-6 relative">
           <div className="w-full flex justify-between items-end border-b border-zinc-800/80 pb-3 mb-2 relative">
@@ -89,7 +89,7 @@ export function FeatureCardsSection() {
         </div>
 
         {/* Hardware Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto px-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto">
           {/* Card 1: Monitoring / Settlement */}
           <HardwareCard
             id="TX.01"

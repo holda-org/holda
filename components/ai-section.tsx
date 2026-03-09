@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ChevronRight, Check, Paperclip, Globe, Lightbulb } from "lucide-react";
 
 const agents = [
-  { name: "Stella", isAgent: true, selected: true, icon: "✨" },
+  { name: "Stellar", isAgent: true, selected: true, icon: "✨" },
   { name: "Support", isAgent: true, selected: false, icon: "💬" },
   { name: "Arbiter", isAgent: true, selected: false, icon: "⚖️" },
   { name: "Buyer", isAgent: false, selected: false, icon: "👤" },
@@ -15,7 +15,7 @@ export function AISection() {
   return (
     <div className="relative z-20 py-10 px-2 md:px-4">
       <div className="absolute top-0 left-0 right-0 pointer-events-none" />
-      <div className="w-full flex justify-center px-6">
+      <div className="w-full flex justify-center lg:px-6">
         <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl">
           {/* Section label */}
           <motion.div
@@ -57,7 +57,7 @@ export function AISection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-zinc-400 max-w-md mb-8"
           >
-            <span className="text-white font-medium">Meet Stella.</span> Your
+            <span className="text-white font-medium">Meet Stellar</span> Your
             built-in AI assistant to guide you through escrow creation,
             verification, and dispute resolution.
           </motion.p>
@@ -212,7 +212,7 @@ export function AISection() {
           >
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Left column */}
-              <div className="border-t border-r border-b border-zinc-800/60 pt-12 pr-12 pb-16">
+              <div className="border-t border-r border-b border-zinc-800/60 pt-12 lg:pr-12 pb-16">
                 <h3 className="text-zinc-200 font-medium text-xl mb-3">
                   Self-driving escrow operations
                 </h3>
@@ -247,16 +247,13 @@ export function AISection() {
                         style={{ background: "#84cc16" }}
                       >
                         <span className="w-4 h-4 bg-white/30 rounded-full" />
-                        <span className="text-white">stella</span>
+                        <span className="text-white">stellar</span>
                       </span>
                       <span className="flex items-center gap-1.5 bg-zinc-800/30 rounded-md px-2 py-1 text-sm text-zinc-600">
                         <span className="w-3 h-3 border border-zinc-700 rounded" />
-                        Escrow Deposit #402
+                        Deposit #402
                       </span>
-                      <span className="flex items-center gap-1.5 text-sm text-zinc-700">
-                        <span className="w-2 h-2 bg-zinc-600 rounded-full" />
-                        Stellar
-                      </span>
+                      
                     </div>
                   </div>
 
@@ -275,11 +272,11 @@ export function AISection() {
                   </div>
 
                   {/* Expanded Suggestion Card */}
-                  <div className="bg-zinc-800/40 rounded-lg p-4 ml-4">
+                  <div className="bg-zinc-800/40 rounded-lg p-4 lg:ml-4">
                     <div className="flex items-center gap-2 mb-3">
                       <span className="w-5 h-5 bg-zinc-600 rounded-full" />
                       <span className="text-zinc-300 text-sm font-medium">
-                        stella
+                        Stellar
                       </span>
                     </div>
 
@@ -313,7 +310,7 @@ export function AISection() {
               </div>
 
               {/* Right column */}
-              <div className="border-t border-b border-zinc-800/60 pt-12 pl-12 pb-16">
+              <div className="border-t border-b border-zinc-800/60 pt-12 lg:pl-12 pb-16">
                 <h3 className="text-zinc-200 font-medium text-xl mb-3">
                   Holda SDK
                 </h3>

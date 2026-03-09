@@ -261,12 +261,12 @@ export function WorkflowsSection() {
 
   return (
     <section
-      className="relative pt-24 px-2 md:px-4 lg:px-6 w-full"
+      className="relative pt-24 px-2 md:px-4 lg:px-6 w-full "
       style={{ backgroundColor: "#09090B" }}
     >
       {/* Top gradient */}
       <div
-        className="absolute top-0 left-0 right-0 pointer-events-none"
+        className="absolute top-0 left-0 right-0 pointer-events-none rounded-t-2xl"
         style={{
           height: "20%",
           background:
@@ -274,7 +274,7 @@ export function WorkflowsSection() {
         }}
       />
 
-      <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto">
+      <div className="w-full md:w-3xl lg:w-6xl mx-auto">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
           <div className="lg:max-w-xl">
@@ -303,7 +303,7 @@ export function WorkflowsSection() {
         </div>
 
         {/* Carousel */}
-        <div className="relative overflow-hidden w-full">
+        <div className="relative overflow-hidden w-sm md:w-md lg:w-full">
           <div
             className="flex transition-transform duration-500 ease-in-out"
             style={{

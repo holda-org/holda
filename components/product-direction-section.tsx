@@ -7,7 +7,7 @@ export function ProductDirectionSection() {
     <section className="relative py-40 px-2 md:px-4 lg:px-24">
       {/* Gradient overlay at top */}
       <div
-        className="absolute inset-x-0 top-0 pointer-events-none"
+        className="absolute inset-x-0 top-0 pointer-events-none rounded-t-2xl"
         style={{
           height: "20%",
           background:
@@ -15,7 +15,7 @@ export function ProductDirectionSection() {
         }}
       />
 
-      <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto px-6">
+      <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto lg:px-6">
         {/* Section label */}
         <div className="flex items-center gap-2 mb-6">
           <div className="w-3 h-3 rounded-full bg-green-500" />
@@ -220,7 +220,7 @@ export function ProductDirectionSection() {
         {/* Bottom two-column section */}
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left column - Manage projects end-to-end */}
-          <div className="border-t border-r border-b border-zinc-800 pt-10 pr-10 pb-16">
+          <div className="border-t border-r border-b border-zinc-800 pt-10 lg:pr-10 pb-16">
             <h3 className="text-xl font-medium text-zinc-200 mb-3">
               Manage escrow end-to-end
             </h3>
@@ -301,7 +301,7 @@ export function ProductDirectionSection() {
           </div>
 
           {/* Right column - Project updates */}
-          <div className="border-t border-b border-zinc-800 pt-10 pl-10 pb-16">
+          <div className="border-t border-b border-zinc-800 pt-10 lg:pl-10 pb-16">
             <h3 className="text-xl font-medium text-zinc-200 mb-3">
               Escrow updates
             </h3>
@@ -388,7 +388,7 @@ export function ProductDirectionSection() {
           </div>
 
           {/* Right column - Document mockup */}
-          <div className="pt-10 pl-10 pb-16">
+          <div className="pt-10 lg:pl-10 pb-16">
             <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 overflow-hidden">
               {/* Header */}
               <div className="flex items-center gap-2 px-4 py-3 border-b border-zinc-800 text-zinc-400 text-sm">
