@@ -141,7 +141,7 @@ export default function Home() {
                 transition={{ duration: 0.6 }}
                 className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance"
               >
-                Secure, trustless escrow for the modern internet
+                Escrow & Payments Infrastructure on Stellar
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
