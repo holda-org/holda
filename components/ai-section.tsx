@@ -232,7 +232,7 @@ export function AISection() {
                       <path d="M8 0L9.5 5.5L15 7L9.5 8.5L8 14L6.5 8.5L1 7L6.5 5.5L8 0Z" />
                     </svg>
                     <span className="text-zinc-500 text-sm">
-                      Stella <span className="text-zinc-300">Intelligence</span>
+                      Stellar<span className="text-zinc-300">Intelligence</span>
                     </span>
                   </div>
 

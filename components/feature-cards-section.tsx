@@ -268,10 +268,10 @@ export function FeatureCardsSection() {
             </div>
           </HardwareCard>
 
-          {/* Card 4: AI / Stella */}
+          {/* Card 4: AI / Stellar*/}
           <HardwareCard
             id="AI.04"
-            title="Stella AI Verification"
+            title="StellarAI Verification"
             description="Algorithmic auditing of contract terms and counterparty reputation."
             // accentColor="green"
           >

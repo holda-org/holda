@@ -4,7 +4,7 @@ export function Footer() {
   const footerLinks = {
     Features: [
       "Escrow",
-      "Stella AI",
+      "StellarAI",
       "Disputes",
       "Stellar Network",
       "USDC/EURC",

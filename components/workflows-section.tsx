@@ -70,7 +70,7 @@ function IntercomMockup() {
     <div className="flex flex-col gap-3 p-4">
       <div className="flex items-center gap-2 text-xs text-zinc-400">
         <MessageSquare className="w-3.5 h-3.5" />
-        <span>Stella Support</span>
+        <span>StellarSupport</span>
         <span className="text-zinc-600">·</span>
         <span className="text-zinc-500">buyer@stellar.org</span>
       </div>

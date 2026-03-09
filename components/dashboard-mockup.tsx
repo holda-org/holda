@@ -66,7 +66,7 @@ export function DashboardMockup() {
       >
         {/* Logo/Platform */}
         <div className="p-3 border-b border-zinc-800/40">
-         <NavbarLogo />
+          <NavbarLogo />
         </div>
 
         {/* Wallet Balance */}
@@ -210,7 +210,7 @@ export function DashboardMockup() {
             <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-zinc-900 border border-zinc-800">
               <div className="w-1.5 h-1.5 rounded-full bg-lime-400 animate-pulse" />
               <span className="text-[10px] text-zinc-300 font-medium">
-                Stella AI Monitoring
+                StellarAI Monitoring
               </span>
             </div>
             <MoreHorizontal className="w-4 h-4 text-zinc-500 cursor-pointer hover:text-white transition-colors" />
@@ -258,7 +258,7 @@ export function DashboardMockup() {
               />
             </div>
 
-            {/* Stella AI Section */}
+            {/* StellarAI Section */}
             <div className="bg-zinc-900/40 border border-zinc-800/60 rounded-xl p-5 mb-10 relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-3 opacity-20 group-hover:opacity-40 transition-opacity">
                 <Sparkles className="w-8 h-8 text-lime-400" />
@@ -268,7 +268,7 @@ export function DashboardMockup() {
                   <Zap className="w-3.5 h-3.5 text-black" />
                 </div>
                 <h3 className="text-white font-medium text-sm">
-                  Stella AI Summary
+                  StellarAI Summary
                 </h3>
               </div>
               <div className="space-y-3">

@@ -39,7 +39,7 @@ The Stellar network offers unique advantages for escrow infrastructure:
 
 ## Meet Stella
 
-**Stella** is Holda's built-in AI assistant. Stella helps users:
+**Stella** is Holda's built-in AI assistant. Stellarhelps users:
 
 - Create and configure escrow agreements
 - Understand release conditions and contract terms
@@ -47,21 +47,21 @@ The Stellar network offers unique advantages for escrow infrastructure:
 - Monitor escrow status in plain language
 - Get real-time guidance throughout every transaction
 
-Stella makes the complexity of blockchain escrow accessible to everyone — no technical knowledge required.
+Stellarmakes the complexity of blockchain escrow accessible to everyone — no technical knowledge required.
 
 ---
 
 ## Key Features
 
-| Feature | Description |
-|---|---|
-| **Decentralized Escrow** | Funds are locked on-chain — no third party controls them |
-| **Conditional Payments** | Programmable release conditions: delivery, milestones, time-locks, multi-step verification |
-| **Dispute Resolution** | Contracts enter dispute mode with resolution mechanisms; decentralized arbitration planned |
-| **Multi-party Verification** | Supports buyer + seller approval, escrow agent verification, and DAO arbitration |
-| **Transparent Transactions** | All escrow activity is on-chain — fully immutable and verifiable |
-| **AI-Assisted UX** | Stella guides users through every step with natural language support |
-| **Low Fees** | Built on Stellar for near-zero transaction costs |
+| Feature                      | Description                                                                                |
+| ---------------------------- | ------------------------------------------------------------------------------------------ |
+| **Decentralized Escrow**     | Funds are locked on-chain — no third party controls them                                   |
+| **Conditional Payments**     | Programmable release conditions: delivery, milestones, time-locks, multi-step verification |
+| **Dispute Resolution**       | Contracts enter dispute mode with resolution mechanisms; decentralized arbitration planned |
+| **Multi-party Verification** | Supports buyer + seller approval, escrow agent verification, and DAO arbitration           |
+| **Transparent Transactions** | All escrow activity is on-chain — fully immutable and verifiable                           |
+| **AI-Assisted UX**           | Stellarguides users through every step with natural language support                       |
+| **Low Fees**                 | Built on Stellar for near-zero transaction costs                                           |
 
 ---
 
@@ -96,7 +96,7 @@ Step 5 — Fund Release       Contract automatically releases funds to the selle
                 |   (Next.js / React)   |
                 +----------+------------+
                            |
-                     Stella AI Layer
+                     StellarAI Layer
                   (AI-assisted UX & guidance)
                            |
                            | Web3 Provider
@@ -127,7 +127,7 @@ Step 5 — Fund Release       Contract automatically releases funds to the selle
 
 **Frontend Layer** — UI for creating and managing escrows with wallet connection and transaction interaction
 
-**Stella AI Layer** — Natural language guidance and AI-assisted escrow management
+**StellarAI Layer** — Natural language guidance and AI-assisted escrow management
 
 **Wallet Layer** — User authentication and transaction signing via Stellar-compatible wallets
 
@@ -174,16 +174,16 @@ Every Holda escrow follows a defined lifecycle:
 
 ## Technology Stack
 
-| Layer | Technologies |
-|---|---|
-| Blockchain | Stellar Network |
-| Smart Contracts | Soroban (Stellar) |
-| Frontend | React, Next.js, Tailwind CSS |
-| AI Assistant | Stella (built-in AI) |
-| Web3 Libraries | stellar-sdk, Horizon API |
-| Backend | Node.js, API services, Webhooks |
-| Wallet Support | Lobstr, Ledger Live, Freighter, WalletConnect |
-| Stablecoins | USDC, EURC on Stellar |
+| Layer           | Technologies                                  |
+| --------------- | --------------------------------------------- |
+| Blockchain      | Stellar Network                               |
+| Smart Contracts | Soroban (Stellar)                             |
+| Frontend        | React, Next.js, Tailwind CSS                  |
+| AI Assistant    | Stellar(built-in AI)                          |
+| Web3 Libraries  | stellar-sdk, Horizon API                      |
+| Backend         | Node.js, API services, Webhooks               |
+| Wallet Support  | Lobstr, Ledger Live, Freighter, WalletConnect |
+| Stablecoins     | USDC, EURC on Stellar                         |
 
 ---
 
@@ -237,9 +237,11 @@ holda/
 ### Endpoints
 
 **Create Escrow**
+
 ```
 POST /escrow/create
 ```
+
 ```json
 {
   "buyer": "stellar_address",
@@ -250,28 +252,35 @@ POST /escrow/create
   "expiry": "timestamp"
 }
 ```
+
 Response: `{ "escrowId": "12345", "status": "created" }`
 
 **Deposit Funds**
+
 ```
 POST /escrow/deposit
 ```
+
 ```json
 { "escrowId": "12345", "amount": "value" }
 ```
 
 **Release Funds**
+
 ```
 POST /escrow/release
 ```
+
 ```json
 { "escrowId": "12345", "approvedBy": "buyer_stellar_address" }
 ```
 
 **Raise Dispute**
+
 ```
 POST /escrow/dispute
 ```
+
 ```json
 { "escrowId": "12345", "reason": "description" }
 ```
@@ -285,23 +294,23 @@ npm install holda-sdk
 ```
 
 ```javascript
-import Holda from "holda-sdk"
+import Holda from "holda-sdk";
 
 const holda = new Holda({
   network: "stellar",
-  horizonUrl: "https://horizon.stellar.org"
-})
+  horizonUrl: "https://horizon.stellar.org",
+});
 
 // Create an escrow
 const escrow = await holda.createEscrow({
   buyer: buyerAddress,
   seller: sellerAddress,
   amount: "100 USDC",
-  conditions: "Delivery confirmed"
-})
+  conditions: "Delivery confirmed",
+});
 
 // Release funds
-await holda.releaseEscrow(escrow.id)
+await holda.releaseEscrow(escrow.id);
 ```
 
 ---
@@ -310,7 +319,7 @@ await holda.releaseEscrow(escrow.id)
 
 - [x] **Phase 1** — Core escrow smart contract development
 - [ ] **Phase 2** — Frontend web interface and wallet integrations
-- [ ] **Phase 3** — Stella AI assistant integration
+- [ ] **Phase 3** — StellarAI assistant integration
 - [ ] **Phase 4** — Advanced dispute resolution system
 - [ ] **Phase 5** — Developer SDK and third-party integrations
 - [ ] **Phase 6** — Mainnet launch on Stellar network
@@ -346,8 +355,8 @@ Please ensure all contributions follow project coding standards.
 
 ## Contact
 
-| Channel | Link |
-|---|---|
-| Website | [holda.app](https://holda.app) |
-| Email | [team@holda.app](mailto:team@holda.app) |
-| Telegram | [@Holda](https://t.me/Holda) |
+| Channel  | Link                                    |
+| -------- | --------------------------------------- |
+| Website  | [holda.app](https://holda.app)          |
+| Email    | [team@holda.app](mailto:team@holda.app) |
+| Telegram | [@Holda](https://t.me/Holda)            |
