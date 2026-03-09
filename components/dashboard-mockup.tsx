@@ -24,6 +24,7 @@ import {
   ExternalLink,
   Zap,
 } from "lucide-react";
+import { NavbarLogo } from "./ui/resizable-navbar";
 
 export function DashboardMockup() {
   const containerVariants = {
@@ -65,15 +66,7 @@ export function DashboardMockup() {
       >
         {/* Logo/Platform */}
         <div className="p-3 border-b border-zinc-800/40">
-          <div className="flex items-center gap-2 px-2 py-1.5">
-            <div className="w-6 h-6 rounded bg-lime-400 flex items-center justify-center">
-              <Shield className="w-3.5 h-3.5 text-black" />
-            </div>
-            <span className="text-white font-semibold text-sm tracking-tight">
-              Holda
-            </span>
-            <ChevronDown className="w-3 h-3 text-zinc-500 ml-auto" />
-          </div>
+         <NavbarLogo />
         </div>
 
         {/* Wallet Balance */}
