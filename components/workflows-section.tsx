@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   ChevronLeft,
   ChevronRight,
@@ -235,13 +235,28 @@ function CardMockup({ type }: { type: string }) {
 
 export function WorkflowsSection() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(4);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) setVisibleCards(1);
+      else if (window.innerWidth < 1024) setVisibleCards(2);
+      else setVisibleCards(4);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const scrollLeft = () => {
     setScrollPosition(Math.max(0, scrollPosition - 1));
   };
 
   const scrollRight = () => {
-    setScrollPosition(Math.min(carouselCards.length - 4, scrollPosition + 1));
+    setScrollPosition(
+      Math.min(carouselCards.length - visibleCards, scrollPosition + 1),
+    );
   };
 
   return (
@@ -256,7 +271,7 @@ export function WorkflowsSection() {
         }}
       />
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="w-full max-w-md md:max-w-3xl lg:max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 mb-16">
           <div className="lg:max-w-xl">
@@ -285,15 +300,18 @@ export function WorkflowsSection() {
         </div>
 
         {/* Carousel */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden w-full">
           <div
-            className="flex gap-4 transition-transform duration-300 ease-out"
-            style={{ transform: `translateX(-${scrollPosition * (100 / 4)}%)` }}
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${scrollPosition * (100 / visibleCards)}%)`,
+            }}
           >
             {carouselCards.map((card) => (
               <div
                 key={card.id}
-                className="flex-shrink-0 w-[calc(25%-12px)] min-w-[280px]"
+                className="flex-shrink-0 px-2"
+                style={{ width: `${100 / visibleCards}%` }}
               >
                 <div className="bg-zinc-900/50 border border-zinc-800/50 rounded-xl overflow-hidden h-[340px] flex flex-col">
                   {/* Mockup area */}
@@ -345,7 +363,7 @@ export function WorkflowsSection() {
           <button
             onClick={scrollRight}
             className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-            disabled={scrollPosition >= carouselCards.length - 4}
+            disabled={scrollPosition >= carouselCards.length - visibleCards}
           >
             <ChevronRight className="w-5 h-5" />
           </button>

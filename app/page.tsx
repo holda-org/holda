@@ -122,7 +122,6 @@ export default function Home() {
         </MobileNav>
       </Navbar>
 
-
       <>
         <section
           className="overflow-hidden -mt-24 pt-20 relative flex flex-col lg:flex-row items-center justify-center w-full"
@@ -137,7 +136,6 @@ export default function Home() {
 
           {/* Main content */}
           <div className="relative z-10 pt-28 flex flex-col">
-            {/* Hero text - contained and centered */}
             <div className="w-full flex justify-center px-6 mt-16">
               <div className="w-full max-w-4xl">
                 <motion.h1
@@ -243,7 +241,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 3D Stage - full bleed */}
+         
             <div
               className="relative mt-16"
               style={{
@@ -312,7 +310,7 @@ export default function Home() {
                 </motion.div>
               </div>
             </div>
-
+            
             {/* <LogoCloud /> */}
             <FeatureCardsSection />
             <AISection />
