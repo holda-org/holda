@@ -64,7 +64,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-black">
       <Navbar>
         {/* Desktop Navigation */}
         <NavBody>
