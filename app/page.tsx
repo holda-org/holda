@@ -139,7 +139,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-[56px] font-medium text-white leading-[1.1] text-balance w-2xl"
+                className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] text-balance w-2xl"
               >
                 Escrow & Payments Infrastructure on Stellar
               </motion.h1>
