@@ -133,15 +133,15 @@ export default function Home() {
 
         {/* Main content */}
         <div className="relative z-10 pt-28 flex flex-col">
-          <div className="w-full flex justify-center px-4 mt-8 md:mt-16 text-start lg:text-left">
+          <div className="w-full flex justify-center px-4 md:px-6 mt-8 md:mt-16 text-start lg:text-left">
             <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl px-2">
               <motion.h1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-                className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] text-balance w-2xl"
+                className="text-4xl md:text-5xl lg:text-[56px] font-bold text-white leading-[1.1] text-balance"
               >
-                Escrow & Payments Infrastructure on Stellar
+                Escrow & Payments <br /> Infrastructure on Stellar
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}

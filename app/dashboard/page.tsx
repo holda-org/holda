@@ -24,9 +24,9 @@ import {
   ExternalLink,
   Zap,
 } from "lucide-react";
-import { NavbarLogo } from "./ui/resizable-navbar";
+import { NavbarLogo } from "@/components/ui/resizable-navbar";
 
-export function DashboardMockup() {
+export default function Dashboard() {
   const containerVariants = {
     hidden: {},
     visible: {
@@ -54,7 +54,7 @@ export function DashboardMockup() {
 
   return (
     <motion.div
-      className="w-full h-full bg-zinc-950 flex overflow-hidden font-sans border border-zinc-900 rounded-none md:rounded-xl shadow-2xl"
+      className="w-full h-full bg-zinc-950 flex overflow-hidden font-sans border border-zinc-900"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
