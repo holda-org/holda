@@ -1,7 +1,7 @@
 "use client";
 
 import type React from "react";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
   ShieldCheck,
   ArrowUpRight,
@@ -9,9 +9,7 @@ import {
   LayoutGrid,
   Users,
   Coins,
-  ChevronDown,
   ChevronRight,
-  Shield,
   Search,
   Plus,
   MoreHorizontal,
@@ -27,7 +25,7 @@ import {
 import { NavbarLogo } from "@/components/ui/resizable-navbar";
 
 export default function Dashboard() {
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     visible: {
       transition: {
@@ -37,7 +35,7 @@ export default function Dashboard() {
     },
   };
 
-  const panelVariants = {
+  const panelVariants: Variants = {
     hidden: {
       opacity: 0,
       x: 30,
@@ -54,72 +52,74 @@ export default function Dashboard() {
 
   return (
     <motion.div
-      className="w-full h-full bg-zinc-950 flex overflow-hidden font-sans border border-zinc-900"
+      className="w-full h-screen sticky top-0 bg-zinc-950 flex overflow-hidden font-sans border border-zinc-900"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       {/* Sidebar */}
       <motion.div
-      // className="w-[200px] h-full bg-zinc-950/50 border-r border-zinc-800/40 flex flex-col shrink-0 backdrop-blur-xl"
-      // variants={panelVariants}
+        className="w-[240px] h-screen sticky top-0 bg-zinc-950/50 border-r border-zinc-800/40 flex flex-col justify-between shrink-0 backdrop-blur-xl"
+        variants={panelVariants}
       >
-        {/* Logo/Platform */}
-        <div className="p-3 border-b border-zinc-800/40">
-          <NavbarLogo />
-        </div>
-
-        {/* Wallet Balance */}
-        <div className="p-4 mx-3 my-3 rounded-lg bg-zinc-900/50 border border-zinc-800/50">
-          <p className="text-[10px] text-zinc-500 font-medium uppercase tracking-wider mb-1">
-            Total Balance
-          </p>
-          <div className="flex items-baseline gap-1">
-            <span className="text-white font-semibold text-lg">12,450</span>
-            <span className="text-zinc-500 text-xs font-medium">XLM</span>
+        <div>
+          {/* Logo/Platform */}
+          <div className="p-3 border-b border-zinc-800/40">
+            <NavbarLogo />
           </div>
-        </div>
 
-        {/* Main nav */}
-        <div className="px-3 space-y-0.5">
-          <NavItem icon={LayoutGrid} label="Dashboard" active />
-          <NavItem icon={ShieldCheck} label="Active Escrows" badge={8} />
-          <NavItem icon={ArrowUpRight} label="History" />
-        </div>
+          {/* Wallet Balance */}
+          <div className="p-4 mx-3 my-3 rounded-lg bg-zinc-900/50 border border-zinc-800/50">
+            <p className="text-[10px] text-zinc-500 font-medium uppercase tracking-wider mb-1">
+              Total Balance
+            </p>
+            <div className="flex items-baseline gap-1">
+              <span className="text-white font-semibold text-lg">12,450</span>
+              <span className="text-zinc-500 text-xs font-medium">XLM</span>
+            </div>
+          </div>
 
-        {/* Categories section */}
-        <div className="mt-6 px-3">
-          <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Markets
+          {/* Main nav */}
+          <div className="px-3 space-y-0.5">
+            <NavItem icon={LayoutGrid} label="Dashboard" active />
+            <NavItem icon={ShieldCheck} label="Active Escrows" badge={8} />
+            <NavItem icon={ArrowUpRight} label="History" />
           </div>
-          <div className="space-y-0.5 mt-1">
-            <NavItem icon={Users} label="Arbiter Network" />
-            <NavItem icon={FileCheck} label="Templates" />
-            <NavItem icon={Coins} label="Stellar Assets" />
-          </div>
-        </div>
 
-        {/* Favorites section */}
-        <div className="mt-6 px-3">
-          <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
-            Watchlist
+          {/* Categories section */}
+          <div className="mt-6 px-3">
+            <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
+              Markets
+            </div>
+            <div className="space-y-0.5 mt-1">
+              <NavItem icon={Users} label="Arbiter Network" />
+              <NavItem icon={FileCheck} label="Templates" />
+              <NavItem icon={Coins} label="Stellar Assets" />
+            </div>
           </div>
-          <div className="space-y-0.5 mt-1">
-            <NavItem
-              icon={Clock}
-              label="Pending Release"
-              color="text-amber-400"
-            />
-            <NavItem
-              icon={AlertCircle}
-              label="Disputed"
-              color="text-rose-400"
-            />
+
+          {/* Favorites section */}
+          <div className="mt-6 px-3">
+            <div className="px-2 py-1 text-[10px] text-zinc-500 font-medium uppercase tracking-wider flex items-center gap-1">
+              Watchlist
+            </div>
+            <div className="space-y-0.5 mt-1">
+              <NavItem
+                icon={Clock}
+                label="Pending Release"
+                color="text-amber-400"
+              />
+              <NavItem
+                icon={AlertCircle}
+                label="Disputed"
+                color="text-rose-400"
+              />
+            </div>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="mt-auto p-3 border-t border-zinc-800/40">
+        <div className="p-3 border-t border-zinc-800/40">
           <NavItem icon={Settings} label="Settings" />
           <NavItem icon={HelpCircle} label="Support" />
         </div>
