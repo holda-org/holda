@@ -219,7 +219,7 @@ export default function Dashboard() {
 
         {/* Content */}
         <div className="flex-1 overflow-auto scrollbar-hide">
-          <div className="max-w-3xl mx-auto p-8">
+          <div className="p-8">
             <div className="flex items-start justify-between mb-8">
               <div>
                 <h2 className="text-white text-2xl font-semibold tracking-tight mb-2">
