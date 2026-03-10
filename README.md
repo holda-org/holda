@@ -4,7 +4,7 @@
 
 Holda is powered by **Stella**, an AI assistant built into the platform to guide users through escrow creation, verification, and dispute resolution.
 
-🌐 [holda.app](https://holda.app)
+🌐 [holda-chi.vercel.app](https://holda-chi.vercel.app/)
 
 ---
 
@@ -357,6 +357,6 @@ Please ensure all contributions follow project coding standards.
 
 | Channel  | Link                                    |
 | -------- | --------------------------------------- |
-| Website  | [holda.app](https://holda.app)          |
-| Email    | [team@holda.app](mailto:team@holda.app) |
-| Telegram | [@Holda](https://t.me/Holda)            |
+| Website  | [holda-chi.vercel.app](https://holda-chi.vercel.app)          |
+| Email    | [kliptolite@gmail.com](mailto:kliptolite@gmail.com) |
+| Telegram | [@templeajuzie](https://t.me/templeajuzie)            |
