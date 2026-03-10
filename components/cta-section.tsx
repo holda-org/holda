@@ -1,10 +1,10 @@
 export function CTASection() {
   return (
     <section
-      className="py-24 px-2 md:px-4"
+      className="py-24 px-4 md:px-6"
       style={{ backgroundColor: "#09090B" }}
     >
-      <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl px-2 mx-auto">
+      <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl px-4 mx-auto">
         <div className="flex flex-col md:flex-row items-start justify-between gap-8">
           <h2 className="text-3xl md:text-4xl lg:text-[42px] font-medium text-white tracking-tight">
             Start transacting with confidence.

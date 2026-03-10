@@ -5,7 +5,7 @@ import { Shield } from "lucide-react";
 
 export function FeatureCardsSection() {
   return (
-    <div className="relative z-20 px-2 md:px-4">
+    <div className="relative z-20 px-4 md:px-6">
       <section className="lg:py-10 z-10 w-full relative">
         {/* Section Header */}
         <div className="md:mb-24 flex flex-col items-center gap-6 text-center max-w-lg md:max-w-3xl lg:max-w-6xl mx-auto px-6 relative">

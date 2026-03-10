@@ -261,7 +261,7 @@ export function WorkflowsSection() {
 
   return (
     <section
-      className="relative pt-24 px-2 md:px-4 lg:px-6 w-full "
+      className="relative pt-24 px-4 md:px-6 lg:px-8 w-full "
       style={{ backgroundColor: "#09090B" }}
     >
       {/* Top gradient */}

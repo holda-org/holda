@@ -13,7 +13,7 @@ const agents = [
 
 export function AISection() {
   return (
-    <div className="relative z-20 py-10 px-2 md:px-4">
+    <div className="relative z-20 py-10 px-4 md:px-6">
       <div className="absolute top-0 left-0 right-0 pointer-events-none" />
       <div className="w-full flex justify-center lg:px-6">
         <div className="w-full max-w-lg md:max-w-3xl lg:max-w-6xl">
