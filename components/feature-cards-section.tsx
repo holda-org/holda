@@ -281,7 +281,7 @@ export function FeatureCardsSection() {
             >
               <div className="absolute inset-[4px] rounded-full border border-lime-500/20 z-10 animate-pulse"></div>
               <div
-                className="absolute inset-0 origin-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 animate-spin"
+                className="absolute inset-0 origin-center opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 animate-spin rounded-full"
                 style={{
                   background:
                     "conic-gradient(from 0deg, transparent 60%, rgba(132,204,22,0.1) 90%, rgba(132,204,22,0.9) 100%)",
